@@ -91,6 +91,7 @@ input[type="submit"] {
 
 .sub-form__button:hover{
   border: 1px solid #854fc8;
+  padding: 12px 115px 12px 115px;
 }
 
 .sub-form__button {
