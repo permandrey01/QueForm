@@ -1,105 +1,57 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700&subset=cyrillic");
-body{
-  /*background-image: url(C:/проект/images/Безымянный.png);*/
-}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="Form.css" type="text/css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700&amp;subset=cyrillic"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question Form</title>
+  </head>
+  <body>
+    <div class="container">
+      <form class="sub-form" action="https://60376bfd5435040017722533.mockapi.io/form" method="POST">
+        <div><h2 class="sub-form__title">Задать вопрос</h2></div>
+        <div class="form_items">
+          <div>
+            <input
+              class="sub-form__item"
+              type="text"
+              name="name"
+              pattern="^[А-Яа-яЁё\s-]+$"
+              required
+              placeholder="Фамилия Имя Отчество *"
+            />
+          </div>
 
-.container{
-    display: flex;
-    margin-top: 31px;
-    /*align-items: center;*/
-    justify-content: center;
-    height: 100vh;
-}
+          <div>
+            <input
+              class="sub-form__item"
+              type="tel"
+              name="phone"
+              pattern="\+?[0-9\s\-\(\)]+"
+              required
+              placeholder="Телефон *"
+            />
+          </div>
 
-.sub-form__title {
-  padding: 40px 232px 24px 0px;
-  margin: 0 auto;
-  width: 168px;
-  height: 20px;
-  left: 35px;
-  top: 48px;
-  color: #3B3D43;
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 20px;
-}
-
-form {
-  /*opacity: 0.5;*/
-  box-shadow: 10px 9px 25px -18px;
-  width: 481px;
-  height: 392px;
-  background: #f7f5f9;
-  border-radius: 12px;
-}
-
-input[type="text"] {
-  border: none;
-}
-input[type="tel"] {
-  border: none;
-}
-input[type="email"] {
-  border: none;
-}
-input[type="submit"] {
-  border: none;
-}
-
-.sub-form__item:hover {
-  border: 1px solid #854fc8;
-}
-
-.sub-form__item:focus {
-  border: 1px solid #854fc8;
-}
-
-::-webkit-input-placeholder { /* WebKit browsers */
-  color:#D0C9D6;
-}
-:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-  color: #D0C9D6;
-}
-::-moz-placeholder { /* Mozilla Firefox 19+ */
-  color: #D0C9D6;
-}
-:-ms-input-placeholder { /* Internet Explorer 10+ */
-  color: #D0C9D6;
-}
-
-.sub-form__item {
-  outline: none;
-  /* форма*/
-  width: 367px;
-  margin: 0px 40px 26px 40px;
-  padding:14px 20px 14px 15px;
-  border-radius: 6px;
-  box-shadow: 0px 7px 64px rgba(0, 0, 0, 0.07);
-  background: #ffffff;
-  /* текст*/
-  /*color: #D0C9D6;*/
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 15px;
-  line-height: 20px;
-}
-
-.sub-form__button:hover{
-  border: 1px solid #854fc8;
-}
-
-.sub-form__button {
-  margin:0px 40px 40px 40px;
-  padding: 13px 116px 13px 116px;
-  background: #6979f8;
-  border-radius: 6px;
-  color: #ffffff;
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 17px;
-  line-height: 22px;
-}
+          <div>
+            <input
+              class="sub-form__item"
+              type="email"
+              pattern="\S+@[a-z]+.[a-z]+"
+              name="email"
+              placeholder="Email"
+            />
+          </div>
+          <div>
+            <input class="sub-form__button" type="submit" value="ОТПРАВИТЬ ЗАПРОС" />
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
