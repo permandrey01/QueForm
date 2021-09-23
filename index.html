@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="Form.css" type="text/css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700&amp;subset=cyrillic"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question Form</title>
+  </head>
+  <body>
+    <div class="container">
+      <form class="sub-form" action="https://60376bfd5435040017722533.mockapi.io/form" method="POST">
+        <div><h2 class="sub-form__title">Задать вопрос</h2></div>
+        <div class="form_items">
+          <div>
+            <input
+              class="sub-form__item"
+              type="text"
+              name="name"
+              pattern="^[А-Яа-яЁё\s-]+$"
+              required
+              placeholder="Фамилия Имя Отчество *"
+            />
+          </div>
+
+          <div>
+            <input
+              class="sub-form__item"
+              type="tel"
+              name="phone"
+              pattern="\+?[0-9\s\-\(\)]+"
+              required
+              placeholder="Телефон *"
+            />
+          </div>
+
+          <div>
+            <input
+              class="sub-form__item"
+              type="email"
+              pattern="\S+@[a-z]+.[a-z]+"
+              name="email"
+              placeholder="Email"
+            />
+          </div>
+          <div>
+            <input class="sub-form__button" type="submit" value="ОТПРАВИТЬ ЗАПРОС" />
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
